@@ -17,8 +17,8 @@
 html,
 body {
     height: 100%;
-    line-height: 1.5;
     font-family: sans-serif;
+    background-color: var(--background-color);
 }
 
 img {
@@ -44,6 +44,7 @@ ol {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
+    opacity: 0.8;
 }
 
 .btn-primary {
@@ -69,6 +70,7 @@ ol {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: var(--text-color)
 }
 
 .links:hover {
@@ -83,7 +85,6 @@ ol {
 }
 
 .left-hero {
-    padding: 16px;
     width: 30%;
     text-align: center;
     background-color: #AA6290;
@@ -92,14 +93,14 @@ ol {
 .left-hero span {
     text-align: left;
     display: block;
-    font-size: 28px;
+    font-size: 38px;
     font-weight: bold;
     color: var(--text-color);
 }
 
 .right-hero {
     width: 70%;
-    padding:4px;
+    padding: 4px;
     text-align: center;
     background-image: url(./img/hero.png);
     background-size: 100% 100%;
@@ -116,24 +117,118 @@ ol {
 @media screen and (min-width: 600px) {
     .left-hero {
         width: 20%;
-        padding-left: 24px;
     }
 
     .left-hero span {
-        font-size: 48px;
+        font-size: 62px;
     }
-    
+
     .right-hero {
         width: 80%;
         align-items: start;
         padding: 8px 10%;
     }
-    .right-hero h1{
+
+    .right-hero h1 {
         font-size: 64px;
     }
-    .right-hero a{
+
+    .right-hero a {
+        width: 230px;
         font-size: 24px;
         align-self: flex-end;
         padding: 12px 36px;
+    }
+}
+
+/* Sobre Mi */
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 48px 16px;
+    color: var(--text-color);
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.about img {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .about {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .about h2 {
+        font-size: 48px;
+    }
+
+    .about p {
+        font-size: 24px;
+    }
+
+    .left-about {
+        width: 50%;
+        margin-right: 18px;
+    }
+
+    .right-about {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-about img {
+        width: 100%;
+    }
+}
+/* Mis skills */
+.mis-skills{
+    display:flex;
+flex-direction: column;
+}
+.mis-skills h2{
+    font-size: 28px;
+    color: var(--text-color);
+    margin:24px
+
+}
+.skills{
+    display:flex;
+    flex-wrap: wrap;
+    background-image: url(./img/fondo.png);
+}
+.skills img{
+    width: 86px;
+    height: 86px;
+    margin: 16px;
+}
+@media screen and (min-width: 600px){
+    .skills{
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .mis-skills h2{
+    
+        font-size:48px;
+    }
+    .skills img{
+        width: 120px;
+        height: 120px;
+        margin: 48px;
+     
+
     }
 }

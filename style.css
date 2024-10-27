@@ -1,0 +1,139 @@
+/* Variables */
+:root {
+    --primary-color: #23EA51;
+    --secondary-color: #AA6290;
+    --text-color: #f4f4f9;
+    --text-color-black: #050505;
+    --background-color: #050505;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Compartidos/Shared */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color-black);
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    width: 100%;
+}
+
+.left-hero {
+    padding: 16px;
+    width: 30%;
+    text-align: center;
+    background-color: #AA6290;
+}
+
+.left-hero span {
+    text-align: left;
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.right-hero {
+    width: 70%;
+    padding:4px;
+    text-align: center;
+    background-image: url(./img/hero.png);
+    background-size: 100% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-color);
+}
+
+@media screen and (min-width: 600px) {
+    .left-hero {
+        width: 20%;
+        padding-left: 24px;
+    }
+
+    .left-hero span {
+        font-size: 48px;
+    }
+    
+    .right-hero {
+        width: 80%;
+        align-items: start;
+        padding: 8px 10%;
+    }
+    .right-hero h1{
+        font-size: 64px;
+    }
+    .right-hero a{
+        font-size: 24px;
+        align-self: flex-end;
+        padding: 12px 36px;
+    }
+}

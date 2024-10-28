@@ -228,7 +228,53 @@ flex-direction: column;
         width: 120px;
         height: 120px;
         margin: 48px;
-     
-
+    
     }
+}
+/* Cita */
+.cita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+blockquote{
+    width: 100%;
+    font-size: 24px;
+    margin: 18px 16px;
+    font-weight: bold;
+
+}
+.cita img{
+    width: 200px;
+    height: 100px;
+    margin-top: 24px;
+}
+@media  screen and (min-width:600px){
+    blockquote{
+        font-size: 42px;
+    }
+    .cita img{
+        width: 400px;
+        height: 200px;
+    }
+}
+/* Mis Pryectos*/
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    margin: 48px 16px;
+}
+.proyectos h2{
+    font-size: 28px;
+    color:var(--text-color);
+    margin: 24px;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+}
+.cards-proyectos{
+    
 }

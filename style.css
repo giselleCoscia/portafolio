@@ -44,9 +44,14 @@ ol {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    opacity: 0.8;
+    opacity: 1;
     outline: none;
     border: none;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 .btn-short {
@@ -76,7 +81,9 @@ ol {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: var(--text-color)
+    color: var(--text-color);
+    text-shadow: 1px 1px 5px rgb(216, 80, 159);
+    
 }
 
 .links {
@@ -99,6 +106,7 @@ ol {
 .hero {
     display: flex;
     width: 100%;
+    text-shadow: 1px 1px 10px rgb(230, 125, 186);
 }
 
 .left-hero {
@@ -178,13 +186,13 @@ ol {
 
 .about img {
     width: 100%;
+    border-radius: 12px;
 }
 
 @media screen and (min-width: 600px) {
     .about {
         display: flex;
         flex-direction: row;
-
     }
 
     .about h2 {
@@ -208,7 +216,7 @@ ol {
     }
 
     .right-about img {
-        width: 100%;
+        width: 60%;
     }
 }
 
@@ -232,6 +240,9 @@ ol {
     justify-content: center;
     align-content: space-around;
     background-image: url(./img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .skills img {
@@ -241,10 +252,6 @@ ol {
 }
 
 @media screen and (min-width: 600px) {
-    .skills {
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
 
     .mis-skills h2 {
         font-size: 48px;
@@ -348,21 +355,23 @@ blockquote {
 }
 
 .card-content {
-    padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .card-title {
-    font-size: 1.5rem;
-    margin: 0 0 15px 0;
+    font-size: 16px;
     color: white;
+    align-self: flex-start;
 }
-
 
 .card-button:hover {
     background-color: #888;
@@ -370,9 +379,9 @@ blockquote {
 
 @media screen and (min-width:600px) {
     .proyectos h2 {
-        font-size: 48px;
+        font-size: 28px;
     }
-
+    
     .cards {
         display: flex;
         flex-direction: row;
@@ -399,13 +408,72 @@ blockquote {
     align-items: center;
     justify-content: center;
     padding: 12px;
+
 }
 
 .form input,
-textarea {
+.form textarea {
     padding: 12px;
     border-radius: 8px;
     border: none;
     width: 100%;
-    background-color: #f1f1f1a2;
+    background-color:var(--secondary-color);
+    opacity: 0.8;
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 1s ease;
+
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    opacity: 1;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+@media screen and (min-width:600px) {
+
+    .contacto h1 {
+        font-size: 48px;
+    }
+
+    .form {
+        min-width: 50%;
+        margin: auto; 
+    }
+}
+
+/* Footer */
+
+.footer {
+    background: url(./img/background-footer.png);
+    display: flex;
+    padding: 24px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a img{
+    width: 50px;
+    height: 50px;
+    margin: 0 12px;
+    border-radius: 50%;
+    border: solid 1px #05050522;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.footer a img:hover{
+    transform: rotate(360deg) scale(1.5);
 }
